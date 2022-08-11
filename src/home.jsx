@@ -1,29 +1,45 @@
-function Home() {
+import { NavLink } from "react-router-dom"
+
+export default function Home() {
 
     return (
-        <section className="w-screen h-screen dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-900 dark:to-black flex justify-center items-center flex-col sm:flex-row gap-x-9 gap-y-9">
-            <a href="business-card" class="relative px-6 py-3 font-bold text-white group">
-                <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-                <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
-                <span class="relative text-black">Business Card</span>
-            </a>
-            <a href="travel-journal" class="relative px-6 py-3 font-bold text-white group">
-                <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-                <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
-                <span class="relative text-black">Travel Journal</span>
-            </a>
-            <a href="button" class="relative px-6 py-3 font-bold text-white group">
-                <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-                <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
-                <span class="relative text-black">Button</span>
-            </a>
-            <a href ="button" class="relative px-6 py-3 font-bold text-white group">
-                <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-                <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
-                <span class="relative text-black">Button</span>
-            </a>
+        <section classNameName="overflow-hidden w-screen h-48 dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-900 dark:to-black flex justify-center items-center flex-col sm:flex-row gap-x-9 gap-y-9">
+            <div>
+                <ul className="flex justify-center gap-8 text-white font-bold text-xl p-10 dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-900 dark:to-black">
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
+                        >
+                            Notes App
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/businessCard"
+                            className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
+                        >
+                            Business Card
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
+                            to="/travelJournal"
+                        >
+                            Travel Journal
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
+                            to="/appForm"
+                        >
+                            Form App
+                        </NavLink>
+                    </li>
+                </ul>
+            </div>
         </section>
     )
 }
-
-export default Home 
