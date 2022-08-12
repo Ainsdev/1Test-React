@@ -3,13 +3,13 @@ export default function AddNote(params) {
     //forms hook
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        setInStorage(data);
+        let dt = new Date();
+        dt = dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
+        console.log({ ...data, date: dt });
+        params.addNote(prev => [...prev, { ...data, date: dt }]);
         reset();
     };
-    //Local Storage
-    const storage = window.localStorage;
-    let allNotes = [].concat(JSON.parse(storage.getItem("notes")));
-    const setInStorage = (data) => { storage.setItem('notes', `${allNotes.concat(data)}`); }
+
     //Component 
     return (
         <article className="sm:w-2/3 sm:text-xl">
