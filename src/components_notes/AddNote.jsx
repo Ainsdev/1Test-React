@@ -5,11 +5,9 @@ export default function AddNote(params) {
     const onSubmit = (data) => {
         let dt = new Date();
         dt = dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
-        console.log({ ...data, date: dt });
         params.addNote(prev => [...prev, { ...data, date: dt }]);
         reset();
     };
-
     //Component 
     return (
         <article className="sm:w-2/3 sm:text-xl">
