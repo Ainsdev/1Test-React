@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom"
+import { useState } from "react";
 
 export default function Home() {
 
+    const [title, setTitle] = useState("Principios de React");
+    document.title = title;
     return (
         <section classNameName="overflow-hidden w-screen h-48 dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-900 dark:to-black flex justify-center items-center flex-col sm:flex-row gap-x-9 gap-y-9">
             <div>
                 <ul className="flex justify-center gap-8 text-white font-bold text-xl p-10 dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-900 dark:to-black">
-                    <li>
+                    <li onClick={() => setTitle('Notes App')}>
                         <NavLink
                             to="/"
                             className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
@@ -14,7 +17,7 @@ export default function Home() {
                             Notes App
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setTitle("Business Card")}>
                         <NavLink
                             to="/businessCard"
                             className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
@@ -22,7 +25,7 @@ export default function Home() {
                             Business Card
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setTitle("Travel Journal")}>
                         <NavLink
                             className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
                             to="/travelJournal"
@@ -30,7 +33,7 @@ export default function Home() {
                             Travel Journal
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setTitle("Form Example")}>
                         <NavLink
                             className={({ isActive }) => (isActive ? "text-purple-500 font-extrabold" : "")}
                             to="/appForm"
