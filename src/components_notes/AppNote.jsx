@@ -4,7 +4,7 @@ import Note from "./Note";
 import React, { useState } from "react";
 const storage = window.localStorage;
 export default function AppNotes() {
-    const [notes, setNotes] = useState(JSON.parse(storage.getItem("notes")) || [{ title: "Project Created by: Guilad", text: "", date: "2022/03/08",hour:"NO" }]);
+    const [notes, setNotes] = useState(JSON.parse(storage.getItem("notes")) || [{ title: "Project Created by: Guilad", text: "", date: "2022/03/08",hour:"" }]);
     storage.setItem("notes", JSON.stringify(notes));
     //Delete Notes
     const deleteNote = (event, id) => {
