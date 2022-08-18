@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react";
 
-export default function Home() {
+function Home() {
 
     const [title, setTitle] = useState("Principios de React");
     document.title = title;
@@ -46,3 +46,4 @@ export default function Home() {
         </section>
     )
 }
+export default Home
