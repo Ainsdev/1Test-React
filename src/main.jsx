@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import AppBusinessCard from './components_businessCard/App_businessCard'
 import './index.css'
-import Home from './Home.jsx'
+import Home from './home.jsx'
 import TravelJournal from './components_TravelJournal/AppTravelJournal.jsx'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppForm from './components_form/AppForm'
