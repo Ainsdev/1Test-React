@@ -3,7 +3,7 @@ export default function About() {
         <section className=" px-14 py-2 flex flex-col ">
             <div className="text-white ">
                 <h1 className="text-lg font-bold">About</h1>
-                <p>Soy alguien muy comprometido con lo que hago, me encanta resolver problemas y el desarollo tiene eso que me hace feliz. Me gusta mucho el mundo de la tencologia. Obvio que tambien me encanta aprender y nunca finalizare esto.</p>
+                <p>I am very committed to what I do, I love to solve problems and development has that makes me happy. I love the world of technology. Of course I also love to learn and I will never finish this.</p>
             </div>
             <div className="text-white pt-5">
                 <h1 className="text-lg font-bold">Interests</h1>

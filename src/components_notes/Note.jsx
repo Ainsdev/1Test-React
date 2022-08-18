@@ -6,6 +6,7 @@ export default function Note(params) {
             <div className="flex-col flex gap-1 justify-start items-start ml-2">
                 <h1 className="text-lg font-bold">{params.title}</h1>
                 <p> {params.date} </p>
+                <p className="text-[10px]"> {params.hour} </p>
                 <div className="flex  gap-2 justify-items-center items-center p-1">
                     <img onClick={(event) => params.deleteNote(event,params.myKey)} className="w-5" src="delete.png" alt="" />
                 </div>

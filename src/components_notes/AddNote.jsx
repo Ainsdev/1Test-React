@@ -3,9 +3,10 @@ export default function AddNote(params) {
     //forms hook
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        let dt = new Date();
-        dt = dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
-        params.addNote(prev => [...prev, { ...data, date: dt}]);
+        let date = new Date();
+        let dt = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
+        let hour = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+        params.addNote(prev => [...prev, { ...data, date: dt, hour: hour }]);
         reset();
     };
     //Component 

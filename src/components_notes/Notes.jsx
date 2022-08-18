@@ -6,8 +6,6 @@ export default function Notes(params) {
     const click = () => {
         params.deleteNote(prev => [{ title: "Project Created by: Guilad", text: "", date: "2022/03/08"}]);
     }
-    console.log(data);
-    //managing data
     return (
         <article className="m-1 mt-5 text-black pt-5 sm:w-1/3 flex flex-col">
             <div className="flex gap-4 justify-start items-start">
