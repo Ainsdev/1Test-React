@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 export default function Notes(params) {
     let data = params.data;
     const click = () => {
-        params.deleteNote(prev => [{ title: "Project Created by: Guilad", text: "", date: "2022/03/08"}]);
+        params.deleteNote(prev => [{ title: "Project Created by: Guilad", text: "", date: "Time Zero"}]);
     }
     return (
         <article className="m-1 mt-5 text-black pt-5 sm:w-1/3 flex flex-col">
